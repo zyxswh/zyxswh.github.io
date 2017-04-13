@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页布局测试</title>
+	<style>
+	body{
+		padding:0;
+		margin:0;
+	}
+	html{
+		box-sizing:border-box;
+	}
+	h1{
+		text-align: center;
+	}
+	*,*::after,*::before{
+		box-sizing:inherit;
+	}
+	.clearfix::after{
+		content: ""；
+		display：block;
+		clear: both;
+	}
+     header,footer{
+     	border:2px solid  #ff0000;
+     	height: 200px;
+     	margin: 2% 0;
+     }
+     #center{
+     	width: 1000px;
+     	margin: auto；
+     }
+     aside{
+     	width: 50%;
+     	min-height: 200px;
+     	border:2px solid  #ff0000;
+     	float: left;
+     }
+     main{
+     	border: 2px solid  #ff0000;
+     	width: 30%;
+     	float: left;
+     	margin:0 0 0 2%;
+     	min-height: 200px;
+     }
+	</head>
+	</style>
+</head>
+<body>
+	<h1>网页布局测试</h1>
+	<div id="center">
+		<header>header</header>
+		<section class="clearfix">
+			<aside>aside</aside>
+			<main>main</main>
+		</section>
+		<footer>footer</footer>
+	</div>
+</body>
+</html>
