@@ -1,0 +1,58 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body{
+	background: url(../img/400_1.jpg) fixed ;
+	
+	background-size: 100%;
+}
+.h1{
+	text-decoration: none;
+	list-style-type:none ;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+ul li{
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0;
+}
+.d{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.d ul li{
+	float: left;
+	margin: 20px 30px;
+}
+.d ul li a{
+	text-decoration: none;
+	color: #000;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.d ul li a:hover{
+	color:#fff;
+	border: 1px solid #000;
+}
+header{
+	max-width: 1100px;
+	margin: 30px auto;
+	position: relative;
+}
+header nav{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+header nav ul li{
+	float: left;
+	margin: 20px 30px;
+}
