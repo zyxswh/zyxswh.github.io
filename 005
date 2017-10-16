@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>打字效果</title>
+		<style type="text/css">
+			#div{
+	width: 500px;
+	margin: auto;
+}
+.Slogan{
+	text-align: center;
+	font-size: 3em;
+}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			<h1 class="Slogan"></h1>
+			<h1 class="Slogan"></h1>
+		</div>
+		<script type="text/javascript">
+			var title1="移,动,应,用,开,发,1,6,1, ";
+			var title2="周,伊,翔, ";
+			var k=title1.split(",");
+			var m=title2.split(",");
+			var i=0;
+			var j=0;
+			var Slogan=document.getElementsByClassName("Slogan");
+            var set=setInterval(banner,300);
+            function banner(){
+            	if(i<k.length){
+					Slogan[0].innerText+=k[i]+"";
+					i=i+1;
+				}
+				if(i==k.length&&j<m.length){
+					i=k.length;
+					Slogan[1].innerText+=m[j]+"";
+					j=j+1;
+				}
+				if(i==k.length&&j==m.length){
+					Slogan[0].innerText="";
+					Slogan[1].innerText="";
+					i=0;
+					j=0;
+				}	
+            }
+		</script>
+	</body>
+</html>
