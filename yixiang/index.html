@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: gray;
+				position: relative;
+			}
+			#h1{
+				text-align: center;
+				font-size: 5em;
+				height: 60px;
+				
+			}
+			#h2{
+				text-align: center;
+				font-size: 4em;
+			}
+			#h1,#h2{
+		       color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="h1">我不是针对谁</h1>
+		<h2 id="h2">傅禄翔就是傻吊</h2>
+		<script type="text/javascript">
+			var oh1=document.getElementById("h1");
+			var arry=oh1.innerText;
+			oh1.innerHTML="";
+			var i=0;
+		    function start(){
+		    	if (i<arry.length) {
+		    		oh1.innerText+=arry[i];
+		    	}
+		    	else{
+		    		i=-1;
+		    		oh1.innerHTML="";
+		    	}
+		    	i++;
+		    }
+		    setInterval(start,500);
+		    var oh2=document.getElementById("h2");
+		    var arry2=oh2.innerText;
+		    oh2.innerHTML="";
+		    var a=0;
+		    var ot=600;
+		    function st(){
+		    		if (a<arry2.length) {
+		    		oh2.innerText+=arry2[a];
+		    	}
+
+		    	a++;
+		    }
+		    setInterval(st,ot);
+		</script>
+	</body>
+</html>
