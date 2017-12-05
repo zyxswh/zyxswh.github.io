@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		
+			a{
+				position: relative;
+				display: inline-block;
+			}
+			span{
+				display: none;
+				width: 80px;
+				position: absolute;
+				top: -30px;
+				left: -30px;
+				background: white;
+				color: black;
+				text-align: center;
+			}
+			a:hover span{
+				display: block;
+			}
+			.toolitp{
+				margin-top: 100px;
+				margin-left: 100px;
+			}
+			.toolitp span::after {
+				content: " ";
+				width: 0;
+				height: 0;
+				position: absolute;
+			}
+			.toolitp[data-direction = "top"] span::after {
+				top: 100%;
+				left: 40%;
+				border: 8px solid #000;
+				border-color: burlywood transparent transparent; 
+			}
+			.toolitp[data-direction = "below"] span{
+				
+				top: 30px;
+				left: -30px;
+				background: white;
+				color: black;
+				text-align: center;
+			}
+			.toolitp[data-direction = "below"] span::after {
+				top: -75%;
+				left: 38%;
+				border: 8px solid #000;
+				border-color:transparent transparent burlywood ; 
+			}
+			.toolitp[data-direction = "left"] span{
+				top: 0px;
+				left: -90px;
+				background: white;
+				color: black;
+				text-align: center;
+			}
+			.toolitp[data-direction = "left"] span::after {
+				top: 3px;
+				left: 80px;
+				border: 8px solid #000;
+				border-color:transparent  transparent transparent burlywood; 
+			}
+			.toolitp[data-direction = "right"] span{
+				top: 0px;
+				left: 30px;
+				background: white;
+				color: black;
+				text-align: center;
+			}
+			.toolitp[data-direction = "right"] span::after {
+				top: 3px;
+				left: -16px;
+				border: 8px solid #000;
+				border-color:transparent  burlywood transparent transparent ; 
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="toolitp">
+			<a href="#" class="toolitp"  data-direction = "top">上</a>
+			<a href="#" class="toolitp"  data-direction = "below">下</a>
+			<a href="#" class="toolitp"  data-direction = "left">左</a>
+			<a href="#" class="toolitp"  data-direction = "right">右</a>
+		</div>
+		<script type="text/javascript">
+			(function(){
+				var litp=document.querySelectorAll(".toolitp");
+				for(var i=0;i<litp.length;i++)
+				{
+					var content=document.createElement("span");
+					content.innerHTML=litp[i].getAttribute('data-direction');
+					litp[i].appendChild(content);
+				}
+				
+			})();
+		</script>
+	</body>
+</html>
